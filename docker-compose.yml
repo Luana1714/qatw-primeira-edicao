@@ -3,7 +3,8 @@
 services:
   # Serviço de banco de dados PostgreSQL
   db:
-    container_name: paybank-db
+    container_name: 
+  
     image: postgres:13
     environment:
       - POSTGRES_USER=dba                 # Usuário do banco de dados
@@ -89,9 +90,9 @@ services:
     environment:
       - REDIS_HOST=paybank-redis                             # Host do Redis
       - REDIS_PORT=6379                                      # Porta do Redis
-      - MAILTRAP_ACCOUNT_ID=3365587                          # ID da conta do Mailtrap
-      - MAILTRAP_TOKEN=8aa3830ddaeaadd601afe16cae5da073      # Token do Mailtrap
-      - MAILTRAP_INBOX_ID=3365587                            # ID da caixa de entrada do Mailtrap
+      - MAILTRAP_ACCOUNT_ID=3471184                          # ID da conta do Mailtrap
+      - MAILTRAP_TOKEN=1b47a26d556772e1bf9ee9d6825cdd9a     # Token do Mailtrap
+      - MAILTRAP_INBOX_ID=3471184                            # ID da caixa de entrada do Mailtrap
       - TZ=America/Sao_Paulo                                 # Fuso horário
     restart: unless-stopped
 
